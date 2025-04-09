@@ -14,7 +14,7 @@ export const Preguntas = {
         },
         {
             pregunta: "¿Con qué frecuencia se actualizan los eventos en el sitio web?",
-            respuesta: "Recomendamos visitar la sección de eventos con para conocer las últimas novedades y eventos."
+            respuesta: "Recomendamos visitar la sección de eventos para conocer las últimas novedades y eventos."
         },
         {
             pregunta: "¿Necesito crear una cuenta para usar este sitio web?",
