@@ -6,7 +6,7 @@ export const footer = {
         },
         {
             tittle: 'Direccion:',
-            content: 'Comayagüela, Francisco Morazan, Honduras'
+            content: 'Tegucigalpa, Francisco Morazan, Honduras'
         },
         {
             tittle: 'Redes Sociales:',
