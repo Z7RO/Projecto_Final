@@ -1,0 +1,15 @@
+<div class="calendario-container">
+    <h1>Próximos Eventos</h1>
+    <div id="eventos-lista">
+        {{#each eventos}}
+        <div class="evento-item">
+            <div class="etiqueta-mes">{{mes}}</div>
+            
+            <h3>{{titulo}}</h3>
+            <p>{{descripcion}}</p>
+             <p>{{fecha}}</p>
+            <span class="fecha-evento">{{fecha}}</span>
+        </div>
+        {{/each}}
+    </div>
+</div>
