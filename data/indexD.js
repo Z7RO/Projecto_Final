@@ -1,8 +1,7 @@
 import { navigation } from "./common/navigation"
 import { footer } from "./common/footer"
 
-import { gallery as indexPageData} from "./pages/gallery"
-
+//import { gallery as indexPageData} from "./pages/gallery"
 
 export const getPageContext = (pagePath)=>{
     console.log("Page to Load Context:", pagePath)
