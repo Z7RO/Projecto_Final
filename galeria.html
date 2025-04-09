@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Fotos</title>
+  <link rel="stylesheet" href="less/galeria.less" />
+</head>
+
+<body>
+  {{>header}}
+  <main>
+    <h2 class="tit">Establecimineto</h2>
+    <section class="testimonios-container">
+      {{#each Establecimientos}}
+      {{> gallery this}}
+      {{/each}}
+    </section>
+
+    <h2 class="tit">Modelos</h2>
+    <section class="testimonios-container">
+      {{#each Modelos}}
+      {{> gallery this}}
+      {{/each}}
+    </section>
+    <h2 class="tit">Personal Capacitado</h2>
+    <section class="testimonios-container">
+      {{#each PersonalCapacitado}}
+      {{> gallery this}}
+      {{/each}}
+    </section>
+  </main>
+  {{>footer}}
+</body>
+
+</html>
