@@ -1,0 +1,153 @@
+@import "variables.less";
+@import "footer.less";
+@import "header.less";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*MAIN*/
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+main h1{
+    color: #ffffff;
+    padding-bottom: 10px;
+    filter: drop-shadow(2px 5px 3px #11471c);
+}
+
+.card-container {
+    flex-direction: row;
+    max-width: 1024px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;  
+    box-shadow: 0px 0px 20px #11471c;
+    z-index: initial;
+    margin: 5px;
+    transition: transform 0.75s ease-in-out, z-index 0.75s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.25);
+    z-index: 90;
+}
+
+.card img{
+    max-width: 300px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #332e2b;
+    box-sizing: border-box;
+  }
+  
+  .testimonios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+  .tit {
+    text-align: center; 
+    width: 100%; 
+    margin: 0 auto 20px auto; 
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 1.5rem;
+    color: rgb(121, 23, 23);
+  }
+
+  /* Contenedor general de las tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Tarjeta individual */
+.card2 {
+    width: 100%;
+    max-width: 300px; 
+    height: 300px; 
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(17, 71, 28, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #11471c;
+}
+
+.card2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(17, 71, 28, 0.7);
+}
+
+.card-img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-container img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center;
+}
+
+.card2 h2 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    color: #31522f;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.card2 small {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.card2 p {
+    font-size: 1rem;
+    padding: 0 1rem 1rem;
+    color: #333;
+}
