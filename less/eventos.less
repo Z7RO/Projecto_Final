@@ -9,16 +9,19 @@
 @fondo-claro: #ffffff;
 @fondo-evento: rgb(219, 235, 221);
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
   background-color: @fondo-claro;
   margin: 0;
   display: flex;
   flex-direction: column;
-
   overflow-x: hidden;
   justify-content: flex-start;
-
+  width: 100%;
 }
 
 .calendario-container {
@@ -54,18 +57,16 @@ body {
 #eventos-lista,
 #eventos-lista-pasados {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
-  padding: 10px;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 25px;
+  padding: 20px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-left: 30px;
+  margin-left: 250px;
+  margin-right: 0;
+  width: calc(100% - 250px); 
   overflow: hidden;
-  margin: 0 auto 80px auto;
-  margin: 0 0 90px auto;
-  width: 80%;
-
 }
 
 .evento-item {
@@ -81,7 +82,6 @@ body {
   position: relative;
   z-index: 1;
   word-wrap: break-word;
-
 
   &.pasado {
     border-left: 6px solid @color-borde-pasado;
@@ -124,45 +124,50 @@ body {
   }
 }
 
+/* Tablet y pantallas medianas */
 @media (max-width: 1060px) {
   .calendario-container {
     padding: 0 10px;
     margin-top: 60px;
   }
 
-  #eventos-lista {
+  #eventos-lista,
+  #eventos-lista-pasados {
     gap: 8px;
     padding: 8px;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    margin-top: 100px;
-
+    margin: 40px auto;
+    width: 90%;
+    margin-top: 200px;
   }
 
   .evento-item {
     padding: 8px;
-
   }
 }
 
+/* Móviles */
 @media (max-width: 600px) {
   body {
     margin: 0;
+    overflow-x: hidden;
   }
 
-  .calendario-container {
-    padding: 0 5px;
-  }
+  
 
   #eventos-lista {
     gap: 5px;
     padding: 5px;
-    margin-top: 200px;
+    margin: 20px 0;
+    margin-top: 200px; 
     grid-template-columns: 1fr;
-
+    width: 100%;
   }
 
   .evento-item {
     padding: 8px;
+    width: 100%;
+    margin-top: 20px; 
   }
 
   h3 {
@@ -182,6 +187,5 @@ body {
   .etiqueta-mes {
     font-size: 0.65em;
     padding: 3px 6px;
-
   }
 }
