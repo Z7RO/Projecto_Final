@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario de Eventos de la Tienda</title>
+  <link rel="stylesheet" href="less/eventos.less">
+</head>
+
+<body>
+
+  {{>header}}
+  <main>
+  <div id="proximos" class="calendario-container">
+    <h1>Próximos Eventos</h1>
+    <div class="boton-navegacion">
+      <a href="#pasados" class="boton-link">Ir a eventos pasados</a>
+    </div>
+    <div id="eventos-lista">
+      {{#each eventos}}
+      <div class="evento-item {{#if destacado}}destacado{{/if}}">
+        <div class="etiqueta-mes">{{mes}}</div>
+        <h3>{{titulo}}</h3>
+        <p>{{descripcion}}</p>
+        <span class="fecha-evento">{{fecha}}</span>
+
+        {{#if enlace}}
+        <a href="{{enlace}}">Ver más</a>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div id="pasados" class="calendario-container eventos-pasados">
+    <h1>Eventos Pasados</h1>
+    <div class="boton-navegacion">
+      <a href="#proximos" class="boton-link">Volver a próximos eventos</a>
+    </div>
+    <div id="eventos-lista-pasados">
+      {{#each eventosP}}
+      <div class="evento-item pasado">
+        <div class="etiqueta-mes">{{mes}}</div>
+        <h3>{{titulo}}</h3>
+        <p>{{descripcion}}</p>
+        <p class="fecha-evento">{{fecha}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</main>
+  {{>footer}}
+
+</body>
+
+</html>
