@@ -6,7 +6,7 @@ export const Preguntas = {
         },
         {
             pregunta: "¿Cómo puedo encontrar más información sobre las ropas expuestas?",
-            respuesta: "Cada artículo incluye descripciones detalladas, incluyendo materiales, consejos de estilo e instrucciones de cuidado. Para consultas sobre compras, puede contactar directamente con la marca o el vendedor a través de los enlaces proporcionados"
+            respuesta: "Cada artículo incluye una informacion breve sobre el articulo. Para consultas sobre compras, puede contactar directamente con la marca o el vendedor a través de los enlaces proporcionados"
         },
         {
             pregunta: "¿Cómo se seleccionan las prendas para exhibir?",
@@ -18,7 +18,7 @@ export const Preguntas = {
         },
         {
             pregunta: "¿Necesito crear una cuenta para usar este sitio web?",
-            respuesta: "El acceso y la navegación general están disponibles para todos los visitantes."
+            respuesta: "El acceso y la navegación general están disponibles para todos los usuarios."
         },
         {
             pregunta: "¿Puedo compartir contenido de este sitio web en redes sociales?",
