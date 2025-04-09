@@ -1,0 +1,40 @@
+@import "variables.less";
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  background-color: @footer-bg;
+  border-top: 1px solid #e0e0e0;
+  font-family: Arial, sans-serif;
+  
+  section {
+    flex: 1;
+    max-width: 25%;
+    padding: 0 1rem;
+    
+    p:first-child {
+      font-weight: bold;
+      color: @footer-text-color;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    p:last-child {
+      color: @footer-text-color;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+  }
+  
+  // Responsive design
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    
+    section {
+      max-width: 80%;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  }
+}
