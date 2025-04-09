@@ -1,13 +1,78 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <link rel="stylesheet" href="Less/home.less" />
+</head>
+
+<body>
+  {{>header}}
+  <div class="home-main">
+    <h1>Tiendas Francisco</h1>
+    <img src="imgSource/Ropa.jpg" alt="Banner de la Tienda">
+    <p>
+      En Tiendas Francisco, nos enorgullece ofrecer moda de calidad con estilo y accesibilidad desde [año de fundación].
+      Nacimos con la misión de vestir a nuestras clientas y clientes con prendas que combinen tendencia, comodidad y
+      confianza, siempre a precios justos.
+      Somos una empresa familiar comprometida con nuestro público, brindando una experiencia de compra cercana y
+      personalizada. Nuestro equipo está formado por apasionados de la moda que te asesorarán para que encuentres el
+      outfit perfecto para cualquier ocasión.
+      En Tiendas Francisco, tu estilo es nuestra prioridad.
+    </p>
+    <h2>Mision</h2>
+    <p>
+      En Tiendas Francisco, nuestra misión es ofrecer moda accesible y de calidad, inspirando a nuestros clientes a
+      expresar su estilo único con prendas que combinan tendencia, comodidad y versatilidad. Nos comprometemos a brindar
+      una experiencia de compra cercana y personalizada, con un servicio cálido y un catálogo en constante renovación
+      para satisfacer las necesidades de cada ocasión.
+    </p>
+
+    <section class="home-card-container">
+      <div class="home-card">
+        <div class="home-card-image">
+          <img alt="Ropa Verano Casual" src="imgSource/RopaVerano.jpg" />
+        </div>
+        <div class="home-card-title">
+          <h2>Ropa Casual de Verano</h2>
+        </div>
+        <div class="home-card-body">
+          <p>
+            Los estilos actuales de Verano
+          </p>
+        </div>
+      </div>
+      <div class="home-card">
+        <div class="home-card-image">
+          <img alt="Ropa Verano Playa" src="imgSource/RopaPlaya.jpg" />
+        </div>
+        <div class="home-card-title">
+          <h2>Ropa Playera</h2>
+        </div>
+        <div class="home-card-body">
+          <p>
+            Estilos playeros para Semana Santa
+          </p>
+        </div>
+      </div>
+      <div class="home-card">
+        <div class="home-card-image">
+          <img alt="Ropa Verano Noche" src="imgSource/RopaVerano.jpg" />
+        </div>
+        <div class="home-card-title">
+          <h2>Ropa Para Noches de Verano</h2>
+        </div>
+        <div class="home-card-body">
+          <p>
+            Estilos glamurosos para las noches de Verano
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+  {{>footer}}
+</body>
+
 </html>
