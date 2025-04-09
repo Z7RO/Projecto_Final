@@ -1,0 +1,13 @@
+<div class="calendario-container eventos-pasados">
+    <h1>Eventos Pasados</h1>
+    <div id="eventos-lista-pasados">
+        {{#each eventosP}}
+        <div class="evento-item pasado">
+            <div class="etiqueta-mes">{{mes}}</div>
+            <h3>{{titulo}}</h3>
+            <p>{{descripcion}}</p>
+            <p class="fecha-evento">{{fecha}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
