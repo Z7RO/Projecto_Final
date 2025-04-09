@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog </title>
+    <link rel="stylesheet" href="less/blog.less">
+  
+</head>
+
+<body>
+    {{>header}}
+    <main>
+        <div class="blog-container">
+            <h1>Nuestro Blog </h1>
+            <div id="blog-entradas">
+                {{#each entradasBlogTienda}}
+                <div class="entrada-blog">
+                    {{#if imagen}}
+                    <img src="{{imagen}}" alt="{{titulo}}" class="imagen-entrada">
+                    {{/if}}
+                    <h2 class="titulo-entrada">{{titulo}}</h2>
+                    <p class="fecha-autor">Publicado el {{fecha}} </p>
+                    <div class="contenido-entrada">
+                        {{{contenido}}}
+                    </div>
+                    
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </main>
+    {{>footer}}
+</body>
+
+
+</html>
