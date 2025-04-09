@@ -25,7 +25,7 @@ export const entradasBlogTienda = [
         contenido: `Se acerca el Día de la Madre y encontrar el regalo perfecto puede ser un desafío. ¡No te preocupes!. Si tu mamá es amante de la moda, nuestra selección de bufandas de seda y joyería elegante seguro le encantará. Para las mamás que disfrutan del hogar, considera una manta suave y acogedora . Si busca relajación, un set de cuidado personal con aceites esenciales será un acierto. ¡Explora nuestras sugerencias y encuentra el regalo ideal para celebrar a esa persona tan especial!`,
         fecha: '25 de Marzo de 2025',
         slug: 'guia-definitiva-regalos-dia-de-la-madre',
-        imagen: '/imgSource/blog4.jpg'
+        imagen: '/imgSource/Blog4.jpg'
     },
     {
         titulo: 'Tendencias de primavera-verano 2025: ¡Renueva tu armario!',
