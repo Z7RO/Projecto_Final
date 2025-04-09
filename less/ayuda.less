@@ -1,0 +1,178 @@
+@import "footer.less";
+@import "header.less";
+//
+// Variables de diseño
+// Usa una paleta de colores un poco más llamativa y contrastante, 
+// y ajusta según tus gustos o la identidad de tu marca.
+//
+@color-primario: #2c3e50;         // Color principal (titulares, textos destacados)
+@color-secundario: #3498db;       // Color secundario (bordes, acentos)
+@color-acentuado: #e74c3c;        // Color para acentos extra (si lo necesitas)
+@color-fondo: #f8f9fa;            // Fondo general
+@color-texto: #333;               // Color de texto principal
+@color-borde: #e1e1e1;            // Color para bordes suaves o separadores
+
+@espaciado: 1.5rem;               // Espaciado base
+@radio-borde: 8px;                // Radio de borde
+@ancho-maximo: 1200px;            // Ancho máximo del contenedor
+
+// Sombras y transiciones
+@sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+@transicion-rapida: 0.3s ease;    // Velocidad y estilo de transición
+
+//
+// Mixins
+// 
+
+.titulo-principal {
+  text-align: center;
+  // Aquí puedes añadir más estilos si lo deseas
+}
+
+
+.flex-centrado() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//
+// Estilos base
+// 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: @color-fondo;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: @color-texto;
+}
+
+.ayuda-container {
+  max-width: @ancho-maximo;
+  margin: 0 auto;
+  padding: @espaciado;
+
+  // Título principal
+  h1 {
+    text-align: center;
+    margin-bottom: @espaciado * 1.5;
+    color: @color-primario;
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: 600; // Un poco más de grosor
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: @color-secundario;
+    }
+  }
+}
+
+//
+// Items de ayuda
+// 
+.ayuda-item {
+  background: white;
+  border-radius: @radio-borde;
+  padding: @espaciado;
+  margin-bottom: @espaciado;
+  box-shadow: @sombra;
+  // Borde lateral más grueso y de color secundario
+  border-left: 5px solid @color-secundario;
+
+  // Añadimos una transición para la hover
+  transition: transform @transicion-rapida, box-shadow @transicion-rapida;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  // Título dentro de cada item
+  h2 {
+    color: @color-primario;
+    margin-bottom: @espaciado / 2;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500; // Grosor intermedio
+
+    &::before {
+      content: '•';
+      color: @color-secundario;
+      margin-right: 0.5rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  // Párrafos dentro de cada item
+  p {
+    line-height: 1.7;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+
+  // Podemos agregar un enlace con estilo "botón" dentro de cada item, si se requiere
+  a.boton-accion {
+    display: inline-block;
+    margin-top: @espaciado / 2;
+    padding: 0.6rem 1.2rem;
+    background: @color-secundario;
+    color: #fff;
+    text-decoration: none;
+    border-radius: @radio-borde;
+    transition: background-color @transicion-rapida;
+
+    &:hover {
+      background-color: darken(@color-secundario, 10%);
+    }
+  }
+}
+
+//
+// Diseño responsive
+// 
+@media (max-width: 992px) {
+  .ayuda-container {
+    padding: @espaciado;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ayuda-container {
+    padding: @espaciado / 2;
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: @espaciado;
+    }
+  }
+
+  .ayuda-item {
+    padding: @espaciado / 1.5;
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .ayuda-item {
+    // Ajustamos aún más el borde para dispositivos muy pequeños
+    border-left-width: 4px;
+  }
+}
