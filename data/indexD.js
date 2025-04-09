@@ -5,14 +5,16 @@ import { Preguntas as preguntasPageData } from "./pages/preguntas"
 import { eventos } from "./pages/eventos.js"
 import { eventosP } from "./pages/eventosp.js"
 import { productos } from "./pages/productos.js"
-import { entradasBlogTienda } from "./pages/blog.js";
+import { entradasBlogTienda } from "./pages/blog.js"
+import { testimonios } from "./pages/testimonios"
 
 export const getPageContext = (pagePath) => {
     console.log("Page to Load Context:", pagePath)
     const commonVariables = {
         ...navigation,
         ...footer,
-        ...productos
+        ...productos,
+        ...testimonios
     }
 
     let pageVariables = {};
