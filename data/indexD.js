@@ -7,6 +7,7 @@ import { eventosP } from "./pages/eventosp.js"
 import { productos } from "./pages/productos.js"
 import { entradasBlogTienda } from "./pages/blog.js"
 import { testimonios } from "./pages/testimonios"
+import { Ayuda as AyudaPageData } from "./pages/ayuda"
 
 export const getPageContext = (pagePath) => {
     console.log("Page to Load Context:", pagePath)
@@ -26,6 +27,9 @@ export const getPageContext = (pagePath) => {
         case '/preguntas.html':
             pageVariables = preguntasPageData
             break;
+            case '/ayuda.html':
+            pageVariables = AyudaPageData
+            break;
             case '/eventos.html':
             pageVariables = { eventos, eventosP };
             break;
