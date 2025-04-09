@@ -17,12 +17,12 @@ export const Preguntas = {
             respuesta: "Recomendamos visitar la sección de eventos para conocer las últimas novedades y eventos."
         },
         {
-            pregunta: "¿Necesito crear una cuenta para usar este sitio web?",
-            respuesta: "El acceso y la navegación general están disponibles para todos los usuarios."
-        },
-        {
             pregunta: "¿Puedo compartir contenido de este sitio web en redes sociales?",
             respuesta: "Si. Puedes compartir enlaces a nuestro contenido."
+        },
+        {
+            pregunta: "¿Necesito crear una cuenta para usar este sitio web?",
+            respuesta: "El acceso y la navegación general están disponibles para todos los usuarios."
         },
         {
             pregunta: "¿Qué debo hacer si encuentro un error o problema en el sitio web?",
