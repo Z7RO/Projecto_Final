@@ -12,18 +12,20 @@
     {{>header}}
 
     <div class="faq-info">
-        <div class="faq-header">
+        <div class="faq-image">
+            <img src="/imgSource/pexels-bohlemedia-1884579.jpg" alt="preguntas frecuentes">
+        </div>
+        <div class="faq-content">
             <h1>Preguntas Frecuentes</h1>
-            <div class="faq-image">
-                <img src="/imgSource/pexels-photo-934070.jpeg" alt="preguntas frecuentes">
+            <div class="faq-list">
+                {{#each pregunta_container}}
+                {{>preguntas_frecuentes this}}
+                {{/each}}
             </div>
         </div>
-        <div class="faq-list">
-            {{#each pregunta_container}}
-            {{>preguntas_frecuentes this}}
-            {{/each}}
-        </div>
     </div>
+    
+
     {{>footer}}
 </body>
 
