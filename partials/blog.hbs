@@ -1,0 +1,18 @@
+<div class="blog-container">
+    <h1>Nuestro Blog</h1>
+    <div id="blog-entradas">
+        {{#each entradasBlogTienda}}
+        <div class="entrada-blog">
+            {{#if imagen}}
+            <img src="{{imagen}}" alt="{{titulo}}" class="imagen-entrada">
+            {{/if}}
+            <h2 class="titulo-entrada">{{titulo}}</h2>
+            <p class="fecha-autor">Publicado el {{fecha}} </p>
+            <div class="contenido-entrada">
+                {{{contenido}}}
+            </div>
+         
+        </div>
+        {{/each}}
+    </div>
+</div>
