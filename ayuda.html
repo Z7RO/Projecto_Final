@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Ayudar</title>
+  <link rel="stylesheet" href="less/ayuda.less" />
+</head>
+
+<body>
+
+    {{>header}}
+    <h1 class="titulo-principal"> 
+      Ayuda Tiendas Francisco 
+    </h1>
+    
+  <main>
+
+    {{#each secciones_ayuda}}
+    <div class="ayuda-item">
+        <h3 class="ayuda-titulo">{{this.titulo}}</h3>
+        <p class="ayuda-contenido">{{this.contenido}}</p>
+    </div>  
+    {{/each}}
+
+  </main>
+
+  {{>footer}}
+
+</body>`
+
+</html>
