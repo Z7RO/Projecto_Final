@@ -2,6 +2,8 @@ import { navigation } from "./common/navigation"
 import { footer } from "./common/footer"
 import { gallery as indexPageData} from "./pages/gallery"
 import { Preguntas as preguntasPageData } from "./pages/preguntas"
+import { eventos } from "./pages/eventos.js";
+import { eventosP } from "./pages/eventosp.js";
 
 export const getPageContext = (pagePath) => {
     console.log("Page to Load Context:", pagePath)
@@ -18,6 +20,9 @@ export const getPageContext = (pagePath) => {
             break;
         case '/preguntas.html':
             pageVariables = preguntasPageData
+            break;
+            case '/eventos.html':
+            pageVariables = { eventos, eventosP };
             break;
     }
     const finalContext = {
