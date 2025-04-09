@@ -10,7 +10,11 @@ export const Preguntas = {
         },
         {
             pregunta: "¿Cómo se seleccionan las prendas para exhibir?",
-            respuesta: "Seleccionamos nuestra colección cuidadosamente, priorizando la creatividad, la calidad y las tendencias. Nuestro equipo selecciona piezas que destacan por su diseño y confección únicos."
+            respuesta: "¿Cómo se seleccionan las prendas para exhibir? R: Seleccionamos nuestra colección cuidadosamente, priorizando la creatividad, la calidad y las tendencias. Nuestro equipo selecciona piezas que destacan por su diseño y confección únicos."
+        },
+        {
+            pregunta: "¿Con qué frecuencia se actualizan los eventos en el sitio web?",
+            respuesta: "Recomendamos visitar la sección de eventos con para conocer las últimas novedades y eventos."
         },
         {
             pregunta: "¿Necesito crear una cuenta para usar este sitio web?",
